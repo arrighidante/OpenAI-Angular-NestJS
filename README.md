@@ -1,27 +1,39 @@
-# AngularGpt
+# AngularGpt :rocket:
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.7.
+This project is a dynamic fusion of cutting-edge technologies, designed to bring the power of OpenAI's GPT-3 to your fingertips. It was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.7.
 
-## Development server
+:sparkles: **What's Inside?** :sparkles:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+This project is about a platform where we harness the capabilities of OpenAI's library in Node.js, consumed by an Angular frontend styled with Tailwind CSS. It's not just about fetching information, but also about creating, editing, and generating images. But that's not all! You can also convert text to audio, configure your assistant, and much more. It's a whole new world of possibilities!
 
-## Code scaffolding
+## Local Setup :computer:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Before you can run this project on your local machine, you need to install the necessary dependencies. Follow these steps:
 
-## Build
+1. **Clone the repository**
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+    Use the following command to clone this repository to your local machine:
 
-## Running unit tests
+    ```bash
+    git clone https://github.com/dantearrighi/AngularGpt.git
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+2. **Navigate to the project directory**
 
-## Running end-to-end tests
+    Change your current working directory to the project's directory:
+     ```bash
+     cd AngularGpt
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+3. **Install dependencies**
 
-## Further help
+    Use npm (node package manager) to install all the project dependencies. Run the following command:
+    ```bash
+    npm install
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Development server to run on your machine
+
+4. **Run the application**
+
+    Now that you have installed all the necessary dependencies, you can start the application. Use the following command:
+    ```bash
+    ng serve -o
+  This will start a development server and open the application in your default web browser. Navigate to http://localhost:4200/. The application will automatically reload if you change any of the source files.
