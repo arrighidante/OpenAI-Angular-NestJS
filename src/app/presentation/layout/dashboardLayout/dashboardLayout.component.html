@@ -12,7 +12,14 @@
     <div class="border-gray-700 border my-3"></div>
 
     <!-- Nav Links -->
-
+    @for(route of routes; track route.path){
+    <app-sidebar-menu-item
+      [description]="route.data!['description']"
+      [icon]="route.data!['icon']"
+      [path]="route.path!"
+      [title]="route.data!['title']"
+    ></app-sidebar-menu-item>
+    }
     <!-- End Nav Links -->
   </nav>
 
