@@ -2,11 +2,22 @@
   <div class="chat-messages">
     <div class="grid gap-y-2">
       <!-- Chat Messages -->
-      <app-chat-message text="Type your text"></app-chat-message>
+      <app-chat-message text="Type your text" />
 
-      <app-my-message text="Hello World"></app-my-message>
+      <app-my-message text="Hello World" />
+
+      <app-typing-loader />
     </div>
   </div>
 
   <!-- MessageBox -->
+  <!-- <app-text-message-box
+    placeholder="Type here what you want"
+    (onMessage)="handleMessage($event)"
+  /> -->
+
+  <app-text-message-box-file
+    placeholder="Type here what you want"
+    (onMessage)="handleMessageWithFile($event)"
+  />
 </div>
