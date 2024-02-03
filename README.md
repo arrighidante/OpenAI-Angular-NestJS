@@ -1,7 +1,7 @@
 # AngularGpt :rocket:
 
 This project is a dynamic fusion of cutting-edge technologies, designed to bring the power of OpenAI's GPT-3 to your fingertips. It was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.7.
-It's a course I've taken in [Dev/Talles - OpenAI: Excercises & assistant with Angular + NestJS](https://cursos.devtalles.com/courses/openai-angular-nestjs), the courses platform of [Fernando Herrera](https://fernando-herrera.com) 
+It's a course I've taken in [Dev/Talles - OpenAI: Excercises & assistant with Angular + NestJS](https://cursos.devtalles.com/courses/openai-angular-nestjs), the courses platform of [Fernando Herrera](https://fernando-herrera.com).
 
 :sparkles: **What's Inside?** :sparkles:
 
