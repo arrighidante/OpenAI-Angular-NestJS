@@ -1,12 +1,14 @@
 <div class="chat-container">
   <div class="chat-messages">
     <div class="grid gap-y-2">
+      @for(message of messages(); track $index){ @if(message.isGpt){
       <!-- Chat Messages -->
-      <app-chat-message text="Type your text" />
-
-      <app-my-message text="Hello World" />
-
+      <app-chat-message [text]="message.text" />
+      } @else {
+      <app-my-message [text]="message.text" />
+      } } @if(isLoading()){
       <app-typing-loader />
+      }
     </div>
   </div>
 
@@ -16,8 +18,18 @@
     (onMessage)="handleMessage($event)"
   /> -->
 
-  <app-text-message-box-file
+  <!-- <app-text-message-box-file
     placeholder="Type here what you want"
-    (onMessage)="handleMessageWithFile($event)"
+    (onMessage)="handleMessageWithFile($event)" f
+  />-->
+
+  <app-text-message-box-select
+    placeholder="Type here what you want"
+    [options]="[
+      { id: '1', text: 'One' },
+      { id: '2', text: 'Two' },
+      { id: '3', text: 'Three' }
+    ]"
+    (onMessage)="handleMessageWithSelect($event)"
   />
 </div>
