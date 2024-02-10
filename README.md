@@ -1,4 +1,4 @@
-# AngularGpt :rocket:
+# Angular GPT :rocket:
 
 ## This is a WIP and I'll be pushing new changes while making progress within the course
 
@@ -6,6 +6,8 @@ This project is a dynamic fusion of cutting-edge technologies, designed to bring
 It's a course I've taken in [Dev/Talles - OpenAI: Excercises & assistant with Angular + NestJS](https://cursos.devtalles.com/courses/openai-angular-nestjs), the courses platform of [Fernando Herrera](https://fernando-herrera.com).
 
 :sparkles: **What's Inside?** :sparkles:
+
+Here you'll find the front end solution.
 
 This project is about a platform where we harness the capabilities of OpenAI's library in Node.js, consumed by an Angular frontend styled with Tailwind CSS. It's not just about fetching information, but also about creating, editing, and generating images. But that's not all! You can also convert text to audio, configure your assistant, and much more. It's a whole new world of possibilities!
 
