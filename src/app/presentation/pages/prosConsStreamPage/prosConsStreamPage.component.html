@@ -1,1 +1,25 @@
-<p>prosConsStreamPage works!</p>
+<div class="chat-container">
+  <div class="chat-messages">
+    <div class="grid gap-y-2">
+      <app-chat-message text="What do you want to compare? (stream)" />
+
+      @for (message of messages(); track message.text) {
+        @if (message.isGpt) {
+          <!-- Chat Messages -->
+          <app-chat-message [text]="message.text" />
+        } @else {
+          <app-my-message [text]="message.text" />
+        }
+      }
+      @if (isLoading()) {
+        <app-typing-loader />
+      }
+    </div>
+  </div>
+
+  <!-- MessageBox -->
+  <app-text-message-box
+    placeholder="Type here what you want"
+    (onMessage)="handleMessage($event)"
+  />
+</div>
