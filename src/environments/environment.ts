@@ -1,3 +1,3 @@
 export const environment = {
-  backendAPI: 'http://localhost:3000',
+  backendAPI: 'https://nest-gpt.dantearrighi.com',
 };
