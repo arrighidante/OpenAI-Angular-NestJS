@@ -17,7 +17,6 @@ import { OpenAiServiceService } from 'app/presentation/services/openai.service';
   standalone: true,
   imports: [
     CommonModule,
-
     ChatMessageComponent,
     MyMessageComponent,
     TypingLoaderComponent,
