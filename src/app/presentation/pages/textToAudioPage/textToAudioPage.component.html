@@ -1,1 +1,27 @@
-<p>textToAudioPage works!</p>
+<div class="chat-container">
+  <div class="chat-messages">
+    <div class="grid gap-y-2">
+      <app-chat-message text="Type the text you want me to check" />
+
+      @for (message of messages(); track $index) {
+      @if (message.isGpt) {
+      <!-- Chat Messages -->
+      <app-chat-message
+      [text]="message.text"
+      [audioUrl]="message.audioUrl" />
+      } @else {
+      <app-my-message [text]="message.text" />
+      }
+      }
+      @if (isLoading()) {
+      <app-typing-loader />
+      }
+    </div>
+  </div>
+
+  <!-- MessageBox -->
+  <app-text-message-box-select
+  [options]="voices()"
+   placeholder="Type here the text you want to convert to audio"
+   (onMessage)="handleMessageWithSelect($event)" />
+</div>
