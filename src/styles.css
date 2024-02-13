@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+audio[controls] {
+  display: block;
+}
 
 /* width */
 ::-webkit-scrollbar {

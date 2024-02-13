@@ -4,24 +4,27 @@
       <app-chat-message text="Type the text you want me to check" />
 
       @for (message of messages(); track $index) {
-      @if (message.isGpt) {
-      <!-- Chat Messages -->
-      <app-chat-message
-      [text]="message.text"
-      [audioUrl]="message.audioUrl" />
-      } @else {
-      <app-my-message [text]="message.text" />
-      }
+        @if (message.isGpt) {
+          <!-- IA Chat Messages -->
+          <app-chat-message
+            [text]="message.text"
+            [audioUrl]="message.audioUrl"
+          />
+        } @else {
+          <!-- USER Chat Messages -->
+          <app-my-message [text]="message.text" />
+        }
       }
       @if (isLoading()) {
-      <app-typing-loader />
+        <app-typing-loader />
       }
     </div>
   </div>
 
   <!-- MessageBox -->
   <app-text-message-box-select
-  [options]="voices()"
-   placeholder="Type here the text you want to convert to audio"
-   (onMessage)="handleMessageWithSelect($event)" />
+    [options]="voices()"
+    placeholder="Type here the text you want to convert to audio"
+    (onMessage)="handleMessageWithSelect($event)"
+  />
 </div>
