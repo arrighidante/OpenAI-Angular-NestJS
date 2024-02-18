@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import {
+  audioToTextUseCase,
   orthographyUseCase,
   prosConsStreamUseCase,
   prosConsUseCase,
@@ -28,5 +29,9 @@ export class OpenAiServiceService {
 
   textToAudio(prompt: string, voice: string) {
     return from(textToAudioUseCase(prompt, voice));
+  }
+
+  audioToText(file: File, prompt?: string) {
+    return from(audioToTextUseCase(file, prompt));
   }
 }
