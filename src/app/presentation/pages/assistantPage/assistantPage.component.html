@@ -1,1 +1,29 @@
-<p>assistantPage works!</p>
+<div class="chat-container">
+  <div class="chat-messages">
+    <div class="grid gap-y-2">
+      <app-chat-message text="Hi! I'm D4n73. How can I help you today?" />
+
+      @for (message of messages(); track $index) {
+        @if (message.isGpt) {
+          <!-- Chat Messages -->
+          <app-chat-message [text]="message.text" />
+        } @else {
+          <app-my-message [text]="message.text" />
+        }
+      }
+      @if (isLoading()) {
+        <app-typing-loader />
+      }
+    </div>
+  </div>
+
+  <!-- MessageBox -->
+  @if (threadId()) {
+    <app-text-message-box
+      placeholder="Type here what you want"
+      (onMessage)="handleMessage($event)"
+    />
+  } @else {
+    <div><span>Preparing the assistant...</span></div>
+  }
+</div>
