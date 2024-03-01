@@ -16,10 +16,7 @@ import { MarkdownModule } from 'ngx-markdown';
 export class ChatMessageComponent implements OnInit {
   @Input({ required: true }) text!: string;
   @Input() audioUrl?: string;
+  @Input() imageInfo?: { url: string; alt: string };
 
-  ngOnInit(): void {
-    if (this.audioUrl) {
-      console.log(this.audioUrl);
-    }
-  }
+  ngOnInit(): void {}
 }
